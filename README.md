@@ -14,9 +14,9 @@ const aviator = new Aviator({
 });
 
 aviator.listen('connect', (gamepad, originalEvent) => {
-console.log(gamepad.triggers, gamepad.sticks, gamepad.buttons);
-console.log(gamepad.index, gamepad.name, gamepad.original, aviator.gamepads);
-gameloop();
+  console.log(gamepad.triggers, gamepad.sticks, gamepad.buttons);
+  console.log(gamepad.index, gamepad.name, gamepad.original, aviator.gamepads);
+  gameloop();
 });
 aviator.listen('disconnect', (gamepad, originalEvent) => {});
 // if listenButtonEvents is specified in the config
