@@ -40,8 +40,6 @@ export default class Aviator {
     };
   }
   listen(event, callback) {
-    if(!this.config.listenForEvents) {
-    }
     this.listeners[event].push(callback);      
   }
   checkLoop() {
