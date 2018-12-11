@@ -14,7 +14,7 @@ const normalizeStickValue = (stick, deadzone) => {
 const defaultConfig = {
   listenButtonEvents: false,
   normalizeSticksDeadzone: true,
-  sticksDeadZone: 0.2,
+  sticksDeadzone: 0.2,
 };
 
 export default class Aviator {
@@ -97,7 +97,7 @@ export default class Aviator {
       }
       gamepad = new Gamepad(gamepad);
       if(this.config.normalizeSticksDeadzone) {
-        const { deadzone } = this.config;
+        const deadzone = this.config.sticksDeadzone;
         const { left, right } = gamepad.sticks;
         normalizeStickValue(left, deadzone);
         normalizeStickValue(right, deadzone);
