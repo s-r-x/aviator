@@ -25,7 +25,7 @@ aviator.listen('buttonDown', (btn, gamepad) => {});
 
 const gameloop = () => {
   const gamepad = aviator.gamepads[0];
-  const { right } = gamepad;
+  const { right } = gamepad.sticks;
   const angle = Math.atan2(right.y, right.x);
   // BFG.shoot(angle);
   // if(hero.collisionWith(bullet))
