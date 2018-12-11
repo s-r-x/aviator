@@ -10,7 +10,7 @@ import Aviator from 'aviator.js';
 const aviator = new Aviator({
   listenButtonEvents: true,
   normalizeSticksDeadzone: true,
-  sticksDeadZone: 0.2,
+  sticksDeadzone: 0.2,
 });
 
 aviator.listen('connect', (gamepad, originalEvent) => {
