@@ -24,9 +24,12 @@ aviator.listen('buttonUp', (btn, gamepad) => {});
 aviator.listen('buttonDown', (btn, gamepad) => {});
 
 const gameloop = () => {
-  const { right } = aviator.gamepads[0].sticks;
+  const gamepad = aviator.gamepads[0];
+  const { right } = gamepad;
   const angle = Math.atan2(right.y, right.x);
   // BFG.shoot(angle);
+  // if(hero.collisionWith(bullet)
+  // gamepad.pulse({ duration: 500, strongMagnitude: 0.5, weakMagnitude: 0.5 });
   requestAnimationFrame(gameloop);
 }
 ```
