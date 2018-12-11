@@ -26,7 +26,7 @@ aviator.listen('buttonDown', (btn, gamepad) => {});
 const gameloop = () => {
   const { right } = aviator.gamepads[0].sticks;
   const angle = Math.atan2(right.y, right.x);
-  // boom
+  // BFG.shoot(angle);
   requestAnimationFrame(gameloop);
 }
 ```
