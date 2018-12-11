@@ -7,6 +7,7 @@ class Gamepad {
     this.index = gamepad.index;
     const { axes } = gamepad;
   }
+  pulse() {}
 }
 
 class FirefoxGamepad extends Gamepad {
