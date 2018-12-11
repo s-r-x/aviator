@@ -111,6 +111,7 @@ class ChromeGamepad extends Gamepad {
 
   pulse(config) {
     config = { ...config, ...{ duration: 500, strongMagnitude: 0.5, weakMagnitude: 0.5 } };
+    const { duration, strongMagnitude, weakMagnitude } = config;
     const { vibrationType } = this;
     if(vibrationType) {
       this.original.vibrationActuator.playEffect(vibrationType, { duration, strongMagnitude, weakMagnitude });  
